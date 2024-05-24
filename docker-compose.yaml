@@ -1,0 +1,14 @@
+services:
+  ntp:
+    image: dockurr/chrony:latest
+    container_name: ntp
+    restart: always
+    ports:
+      - 123:123/udp
+    environment:
+      NTP_SERVERS: "horaoficial.ibmetro.gob.bo"
+      LOG_LEVE: 0
+      TZ: "America/La_Paz"
+#      NOCLIENTLOG=true
+#      ENABLE_NTS=true
+#      ENABLE_SYSCLK=true
